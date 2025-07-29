@@ -1,8 +1,8 @@
-# A Gellyfish And Tricolor Pansy
-#competitive-programming #codeforces #[dificultad] #miscellaneous #games #techniques #greedy
+# D. Flower Boy
+#codeforces #[dificultad] #search-and-sort/binary-search #binary-search #dynamic-programming #dp #techniques #greedy #search-and-sort/two-pointers #two-pointers
 
 **Plataforma:** Codeforces
-**Contest:** 1028D2
+**Contest:** 1020D3
 **Dificultad:** [Rating/Nivel]
 **Fecha de resolución:** 29/07/2025
 **Tiempo empleado:** [HH:MM]
@@ -12,7 +12,7 @@
 - **Submission:** [URL de submission]
 
 ## 📓 Temas relacionados
-[[topics/miscellaneous/Games|Games]] [[topics/techniques/Greedy|Greedy]]
+[[topics/search-and-sort/binary-search/Binary-Search|Binary-Search]] [[topics/dynamic-programming/Dynamic-Programming|Dynamic-Programming]] [[topics/techniques/Greedy|Greedy]] [[topics/search-and-sort/two-pointers/Two-Pointers|Two-Pointers]]
 
 ## 📖 Descripción
 [Breve resumen del problema]

@@ -151,8 +151,8 @@ def create_problem_structure(platform, contest, problem_name, tags):
 ## 🔄 Versiones
 - `solution.cpp` - Solución principal
 """
-    
-    with open(f"{problem_path}/README.md", "w", encoding='utf-8') as f:
+
+    with open(f"{problem_path}/{problem_name.replace('-', ' ')}.md", "w", encoding='utf-8') as f:
         f.write(readme_content)
     
     # Crear archivo de solución
