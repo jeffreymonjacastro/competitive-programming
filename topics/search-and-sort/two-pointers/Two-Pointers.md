@@ -1,6 +1,6 @@
-# Games
+# Two-Pointers
 
-**Tema padre:** [[topics/miscellaneous/Miscellaneous|Miscellaneous]]
+**Tema padre:** [[topics/search-and-sort/Search And Sort|Search-And-Sort]]
 
 ## 🎯 Definición
 [Definición del algoritmo/técnica]
@@ -12,7 +12,7 @@
 
 ## 💻 Implementación Template
 ```cpp
-// Template básico para Games
+// Template básico para Two-Pointers
 // Agregar implementación aquí
 ```
 
@@ -28,7 +28,7 @@
 ### Fácil (800 - 1200)
 ```dataview
 LIST file.name
-FROM #miscellaneous/Games.md/games AND #competitive-programming 
+FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
 WHERE contains(file.path, "platforms/") AND (contains(tags, "#easy") OR contains(tags, "#800") OR contains(tags, "#1000") OR contains(tags, "#1200"))
 SORT fecha DESC
 ```
@@ -36,7 +36,7 @@ SORT fecha DESC
 ### Medio (1200-1600)
 ```dataview
 LIST file.name
-FROM #miscellaneous/Games.md/games AND #competitive-programming 
+FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
 WHERE contains(file.path, "platforms/") AND (contains(tags, "#medium") OR contains(tags, "#1400") OR contains(tags, "#1600"))
 SORT fecha DESC
 ```
@@ -44,7 +44,7 @@ SORT fecha DESC
 ### Difícil (1600+)
 ```dataview
 LIST file.name
-FROM #miscellaneous/Games.md/games AND #competitive-programming 
+FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
 WHERE contains(file.path, "platforms/") AND (contains(tags, "#hard") OR contains(tags, "#1800") OR contains(tags, "#2000"))
 SORT fecha DESC
 ```
@@ -54,14 +54,14 @@ SORT fecha DESC
 - **Problemas resueltos:** 
 ```dataview
 TABLE rows.length as "Total"
-FROM #miscellaneous/Games.md/games AND #competitive-programming 
+FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
 WHERE contains(file.path, "platforms/")
 ```
 
 - **Última práctica:** 
 ```dataview
 LIST file.name
-FROM #miscellaneous/Games.md/games AND #competitive-programming 
+FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
 WHERE contains(file.path, "platforms/")
 SORT fecha DESC
 LIMIT 1

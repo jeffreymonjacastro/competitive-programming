@@ -1,7 +1,5 @@
 # Greedy
 
-#techniques/Greedy.md #techniques/Greedy.md/greedy #algorithm #competitive-programming
-
 **Tema padre:** [[topics/techniques/Techniques|Techniques]]
 
 ## 🎯 Definición
@@ -76,6 +74,3 @@ LIMIT 1
 ## 🏆 Variaciones Importantes
 - **Variación 1:** [Descripción]
 - **Variación 2:** [Descripción]
-
-
-

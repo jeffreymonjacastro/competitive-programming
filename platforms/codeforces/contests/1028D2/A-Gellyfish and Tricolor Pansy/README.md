@@ -1,4 +1,4 @@
-# Gellyfish And Tricolor Pansy
+# A Gellyfish And Tricolor Pansy
 #competitive-programming #codeforces #[dificultad] #miscellaneous #games #techniques #greedy
 
 **Plataforma:** Codeforces

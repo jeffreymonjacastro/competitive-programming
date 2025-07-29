@@ -112,7 +112,7 @@ def create_problem_structure(platform, contest, problem_name, tags):
     
     # Crear README template con sintaxis de Obsidian
     readme_content = f"""# {problem_name.replace('-', ' ').title()}
-#competitive-programming #{platform} #[dificultad] {' '.join(hierarchical_tags)}
+#{platform} #[dificultad] {' '.join(hierarchical_tags)}
 
 **Plataforma:** {platform.title()}
 **Contest:** {contest if contest and contest != "practice" else 'Practice'}
@@ -234,8 +234,6 @@ def create_topic_if_not_exists(topic_path):
         parent_topic = "[[Competitive Programming]]"
     
     topic_content = f"""# {topic_name}
-
-{main_tag} {specific_tag} #algorithm #competitive-programming
 
 **Tema padre:** {parent_topic}
 
