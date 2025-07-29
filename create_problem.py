@@ -7,63 +7,64 @@ TAG_TO_PATH = {
     'bfs': 'topics/graphs/traversal/BFS.md',
     'dfs': 'topics/graphs/traversal/DFS.md',
     'dijkstra': 'topics/graphs/shortest-path/Dijkstra.md',
-    'bellman-ford': 'topics/graphs/shortest-path/Bellman Ford.md',
-    'floyd-warshall': 'topics/graphs/shortest-path/Floyd Warshall.md',
+    'bellman-ford': 'topics/graphs/shortest-path/Bellman-Ford.md',
+    'floyd-warshall': 'topics/graphs/shortest-path/Floyd-Warshall.md',
     'kruskal': 'topics/graphs/mst/Kruskal.md',
     'prim': 'topics/graphs/mst/Prim.md',
-    'topological-sort': 'topics/graphs/special/Topological Sort.md',
-    
+    'topological-sort': 'topics/graphs/special/Topological-Sort.md',
+
     # DP
-    'dp': 'topics/dynamic-programming/Dynamic Programming.md',
+    'dp': 'topics/dynamic-programming/Dynamic-Programming.md',
     'lis': 'topics/dynamic-programming/classic/LIS.md',
     'knapsack': 'topics/dynamic-programming/classic/Knapsack.md',
-    'tree-dp': 'topics/dynamic-programming/tree-dp/Tree DP.md',
-    'digit-dp': 'topics/dynamic-programming/digit-dp/Digit DP.md',
-    'bitmask-dp': 'topics/dynamic-programming/bitmask-dp/Bitmask DP.md',
-    
+    'tree-dp': 'topics/dynamic-programming/tree-dp/Tree-DP.md',
+    'digit-dp': 'topics/dynamic-programming/digit-dp/Digit-DP.md',
+    'bitmask-dp': 'topics/dynamic-programming/bitmask-dp/Bitmask-DP.md',
+
     # Data Structures
-    'segment-tree': 'topics/data-structures/trees/Segment Tree.md',
-    'fenwick-tree': 'topics/data-structures/trees/Fenwick Tree.md',
+    'segment-tree': 'topics/data-structures/trees/Segment-Tree.md',
+    'fenwick-tree': 'topics/data-structures/trees/Fenwick-Tree.md',
     'dsu': 'topics/data-structures/disjoint-set/DSU.md',
     'trie': 'topics/data-structures/strings/Trie.md',
     
     # math
-    'number-theory': 'topics/mathematics/number-theory/Number Theory.md',
-    'gcd': 'topics/mathematics/number-theory/GCD and LCM.md',
-    'primes': 'topics/mathematics/number-theory/Prime Numbers.md',
+    'number-theory': 'topics/mathematics/number-theory/Number-Theory.md',
+    'gcd': 'topics/mathematics/number-theory/GCD-LCM.md',
+    'primes': 'topics/mathematics/number-theory/Prime-Numbers.md',
     'combinatorics': 'topics/mathematics/combinatorics/Combinatorics.md',
-    'modular-arithmetic': 'topics/mathematics/number-theory/Modular Arithmetic.md',
-    
+    'modular-arithmetic': 'topics/mathematics/number-theory/Modular-Arithmetic.md',
+
     # Strings
     'kmp': 'topics/strings/pattern-matching/KMP.md',
-    'z-algorithm': 'topics/strings/pattern-matching/Z Algorithm.md',
-    'string-hashing': 'topics/strings/string-processing/String Hashing.md',
-    
+    'z-algorithm': 'topics/strings/pattern-matching/Z-Algorithm.md',
+    'string-hashing': 'topics/strings/string-processing/String-Hashing.md',
+
     # Sorting and Searching
-    'binary-search': 'topics/search-and-sort/binary-search/Binary Search.md',
-    'two-pointers': 'topics/search-and-sort/two-pointers/Two Pointers.md',
-    'sliding-window': 'topics/search-and-sort/two-pointers/Sliding Window.md',
-    'complete-search': 'topics/search-and-sort/complete-search/Complete Search.md',
+    'binary-search': 'topics/search-and-sort/binary-search/Binary-Search.md',
+    'two-pointers': 'topics/search-and-sort/two-pointers/Two-Pointers.md',
+    'sliding-window': 'topics/search-and-sort/two-pointers/Sliding-Window.md',
+    'complete-search': 'topics/search-and-sort/complete-search/Complete-Search.md',
 
     # Prefix y Suffix
-    'prefix-sum': 'topics/prefix-suffix/Prefix Sum.md',
-    'suffix-array': 'topics/prefix-suffix/Suffix Array.md',
-    'z-function': 'topics/prefix-suffix/Z Function.md',
+    'prefix-sum': 'topics/prefix-suffix/Prefix-Sum.md',
+    'suffix-array': 'topics/prefix-suffix/Suffix-Array.md',
+    'z-function': 'topics/prefix-suffix/Z-Function.md',
 
     # Techniques
     'greedy': 'topics/techniques/Greedy.md',
-    'divide-conquer': 'topics/techniques/Divide and Conquer.md',
+    'divide-conquer': 'topics/techniques/Divide-and-Conquer.md',
     'backtracking': 'topics/techniques/Backtracking.md',
 
     # Geometry
-    'line-geometry': 'topics/geometry/Line Geometry.md',
-    'sweep-line': 'topics/geometry/Sweep Line.md',
-    'polygon-geometry': 'topics/geometry/Polygon Geometry.md',
-    'convex-hull': 'topics/geometry/Convex Hull.md',
+    'line-geometry': 'topics/geometry/Line-Geometry.md',
+    'sweep-line': 'topics/geometry/Sweep-Line.md',
+    'polygon-geometry': 'topics/geometry/Polygon-Geometry.md',
+    'convex-hull': 'topics/geometry/Convex-Hull.md',
 
-    # Additional Topics
-    'bitwise-operations': 'topics/others/Bitwise Operations.md',
-    'hashing': 'topics/others/Hashing.md',
+    # Miscellaneous
+    'bitwise-operations': 'topics/miscellaneous/Bitwise-Operations.md',
+    'hashing': 'topics/miscellaneous/Hashing.md',
+    'games': 'topics/miscellaneous/Games.md',
 }
 
 def get_hierarchical_tags(tags):

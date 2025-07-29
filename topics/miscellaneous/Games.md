@@ -1,8 +1,8 @@
-# Binary Search
+# Games
 
-#search-and-sort/binary-search #search-and-sort/binary-search/binary-search #algorithm #competitive-programming
+#miscellaneous/Games.md #miscellaneous/Games.md/games #algorithm #competitive-programming
 
-**Tema padre:** [[topics/search-and-sort/Search And Sort|Search-And-Sort]]
+**Tema padre:** [[topics/miscellaneous/Miscellaneous|Miscellaneous]]
 
 ## 🎯 Definición
 [Definición del algoritmo/técnica]
@@ -14,7 +14,7 @@
 
 ## 💻 Implementación Template
 ```cpp
-// Template básico para Binary Search
+// Template básico para Games
 // Agregar implementación aquí
 ```
 
@@ -30,7 +30,7 @@
 ### Fácil (800 - 1200)
 ```dataview
 LIST file.name
-FROM #search-and-sort/binary-search/binary-search AND #competitive-programming 
+FROM #miscellaneous/Games.md/games AND #competitive-programming 
 WHERE contains(file.path, "platforms/") AND (contains(tags, "#easy") OR contains(tags, "#800") OR contains(tags, "#1000") OR contains(tags, "#1200"))
 SORT fecha DESC
 ```
@@ -38,7 +38,7 @@ SORT fecha DESC
 ### Medio (1200-1600)
 ```dataview
 LIST file.name
-FROM #search-and-sort/binary-search/binary-search AND #competitive-programming 
+FROM #miscellaneous/Games.md/games AND #competitive-programming 
 WHERE contains(file.path, "platforms/") AND (contains(tags, "#medium") OR contains(tags, "#1400") OR contains(tags, "#1600"))
 SORT fecha DESC
 ```
@@ -46,7 +46,7 @@ SORT fecha DESC
 ### Difícil (1600+)
 ```dataview
 LIST file.name
-FROM #search-and-sort/binary-search/binary-search AND #competitive-programming 
+FROM #miscellaneous/Games.md/games AND #competitive-programming 
 WHERE contains(file.path, "platforms/") AND (contains(tags, "#hard") OR contains(tags, "#1800") OR contains(tags, "#2000"))
 SORT fecha DESC
 ```
@@ -56,14 +56,14 @@ SORT fecha DESC
 - **Problemas resueltos:** 
 ```dataview
 TABLE rows.length as "Total"
-FROM #search-and-sort/binary-search/binary-search AND #competitive-programming 
+FROM #miscellaneous/Games.md/games AND #competitive-programming 
 WHERE contains(file.path, "platforms/")
 ```
 
 - **Última práctica:** 
 ```dataview
 LIST file.name
-FROM #search-and-sort/binary-search/binary-search AND #competitive-programming 
+FROM #miscellaneous/Games.md/games AND #competitive-programming 
 WHERE contains(file.path, "platforms/")
 SORT fecha DESC
 LIMIT 1
