@@ -1,3 +1,6 @@
+
+
+
 # Greedy
 
 **Tema padre:** [[topics/techniques/Techniques|Techniques]]

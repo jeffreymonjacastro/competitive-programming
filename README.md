@@ -7,8 +7,7 @@ Competitive Programming codes &amp; learning
 
 Hello World
 
-
 ```dataview
-LIST file.name
+LIST replace(file.path)
 FROM #greedy 
 ```
