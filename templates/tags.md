@@ -76,21 +76,21 @@
 - `strings/string-processing` - Procesamiento de strings
     - `strings/string-processing/hashing` - String Hashing
 
-## Búsqueda y Ordenamiento (Search & Sort)
+## Search & Sort
 
 - `search-sort` - Algoritmos de búsqueda y ordenamiento
 - `search-sort/binary-search` - Búsqueda binaria
 - `search-sort/two-pointers` - Técnica de dos punteros
 - `search-sort/sliding-window` - Ventana deslizante
 
-## ⚡ Técnicas Generales (General Techniques)
+## Techniques
 
 - `greedy` - Algoritmos voraces
 - `divide-conquer` - Divide y vencerás
 - `backtracking` - Backtracking
 - `meet-in-middle` - Meet in the middle
 
-## 🏷️ Tags de Estado (State Tags)
+# State Tags
 
 - `solved` - Problema resuelto
 - `needs-review` - Necesita revisión
@@ -101,72 +101,3 @@
 - `editorial-needed` - Necesita editorial
 - `template-worthy` - Digno de template
 - `optimization-needed` - Necesita optimización
-
-## 📋 Tags Adicionales del Script
-
-Basado en el código `create_problem.py`, también están disponibles:
-
-### Grafos Extendidos
-
-- `bfs` - Breadth-First Search
-- `dfs` - Depth-First Search
-- `dijkstra` - Algoritmo de Dijkstra
-- `bellman-ford` - Algoritmo de Bellman-Ford
-- `floyd-warshall` - Algoritmo de Floyd-Warshall
-- `kruskal` - Algoritmo de Kruskal
-- `prim` - Algoritmo de Prim
-- `topological-sort` - Ordenamiento topológico
-
-### DP Específicos
-
-- `lis` - Longest Increasing Subsequence
-- `knapsack` - Problema de la mochila
-- `tree-dp` - DP en árboles
-- `digit-dp` - DP de dígitos
-- `bitmask-dp` - DP con máscaras de bits
-
-### Estructuras de Datos Específicas
-
-- `segment-tree` - Segment Tree
-- `fenwick-tree` - Fenwick Tree
-- `dsu` - Disjoint Set Union
-- `trie` - Estructura Trie
-
-### Matemáticas Específicas
-
-- `number-theory` - Teoría de números
-- `gcd` - Greatest Common Divisor
-- `primes` - Números primos
-- `combinatorics` - Combinatoria
-- `modular-arithmetic` - Aritmética modular
-
-### Strings Específicos
-
-- `kmp` - Knuth-Morris-Pratt
-- `z-algorithm` - Algoritmo Z
-- `string-hashing` - String Hashing
-
-### Búsqueda y Ordenamiento Específicos
-
-- `binary-search` - Búsqueda binaria
-- `two-pointers` - Técnica de dos punteros
-- `sliding-window` - Ventana deslizante
-- `complete-search` - Búsqueda completa
-
-### Prefix y Suffix
-
-- `prefix-sum` - Suma de prefijos
-- `suffix-array` - Arreglo de sufijos
-- `z-function` - Función Z
-
-### Geometría
-
-- `line-geometry` - Geometría de líneas
-- `sweep-line` - Línea de barrido
-- `polygon-geometry` - Geometría de polígonos
-- `convex-hull` - Envolvente convexa
-
-### Otros
-
-- `bitwise-operations` - Operaciones bit a bit
-- `hashing` - Técnicas de hashing
