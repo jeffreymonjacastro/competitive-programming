@@ -1,6 +1,5 @@
 ## 📝 Template de README.md para problemas (en platforms/)
 
-```markdown
 # [Nombre del Problema]
 
 **Plataforma:** [CodeForces/AtCoder/LeetCode/etc.]  
