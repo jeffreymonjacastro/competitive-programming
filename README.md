@@ -2,3 +2,10 @@
 Competitive Programming codes &amp; learning
 
 Hello World
+
+
+```dataview
+LIST
+FROM #greedy 
+```
+
