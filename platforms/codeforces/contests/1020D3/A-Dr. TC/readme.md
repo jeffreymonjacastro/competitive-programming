@@ -6,6 +6,7 @@
 **Dificultad:** 800
 **Fecha de resolución:** 24/04/2025
 **Tiempo empleado:** 9:35 
+
 ## 🔗 Enlaces
 - **Problema:** https://codeforces.com/contest/2106/problem/A
 - **Submission:** https://codeforces.com/contest/2106/submission/317001674

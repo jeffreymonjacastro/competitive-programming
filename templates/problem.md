@@ -1,6 +1,5 @@
-## 📝 Template de README.md para problemas (en platforms/)
-
 # [Nombre del Problema]
+#competitive-programming #[plataforma] #[dificultad] #[algoritmo] #[estructura-datos]
 
 **Plataforma:** [CodeForces/AtCoder/LeetCode/etc.]  
 **Contest:** [Nombre del contest si aplica]  
@@ -12,10 +11,8 @@
 - **Problema:** [URL del problema]
 - **Submission:** [URL de tu submission si está disponible]
 
-## 🏷️ Tags
-#competitive-programming #[plataforma] #[dificultad] #[algoritmo] #[estructura-datos]
-
-**Temas relacionados:** [[Dynamic Programming]] [[Graph Theory]] [[Binary Search]]
+## 📓Temas relacionados:
+[[Dynamic Programming]] [[Graph Theory]] [[Binary Search]]
 
 ## 📖 Descripción
 [Breve resumen del problema en tus propias palabras - máximo 2-3 líneas]

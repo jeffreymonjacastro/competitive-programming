@@ -2,11 +2,10 @@ import os
 import sys
 from datetime import datetime
 
-# Mapeo de tags a rutas de archivos
 TAG_TO_PATH = {
-    # Grafos
-    'bfs': 'topics/graphs/search/BFS.md',
-    'dfs': 'topics/graphs/search/DFS.md',
+    # Graphs
+    'bfs': 'topics/graphs/traversal/BFS.md',
+    'dfs': 'topics/graphs/traversal/DFS.md',
     'dijkstra': 'topics/graphs/shortest-path/Dijkstra.md',
     'bellman-ford': 'topics/graphs/shortest-path/Bellman Ford.md',
     'floyd-warshall': 'topics/graphs/shortest-path/Floyd Warshall.md',
@@ -22,13 +21,13 @@ TAG_TO_PATH = {
     'digit-dp': 'topics/dynamic-programming/digit-dp/Digit DP.md',
     'bitmask-dp': 'topics/dynamic-programming/bitmask-dp/Bitmask DP.md',
     
-    # Estructuras de datos
+    # Data Structures
     'segment-tree': 'topics/data-structures/trees/Segment Tree.md',
     'fenwick-tree': 'topics/data-structures/trees/Fenwick Tree.md',
     'dsu': 'topics/data-structures/disjoint-set/DSU.md',
     'trie': 'topics/data-structures/strings/Trie.md',
     
-    # Matemáticas
+    # math
     'number-theory': 'topics/mathematics/number-theory/Number Theory.md',
     'gcd': 'topics/mathematics/number-theory/GCD and LCM.md',
     'primes': 'topics/mathematics/number-theory/Prime Numbers.md',
@@ -40,15 +39,31 @@ TAG_TO_PATH = {
     'z-algorithm': 'topics/strings/pattern-matching/Z Algorithm.md',
     'string-hashing': 'topics/strings/string-processing/String Hashing.md',
     
-    # Búsqueda y ordenamiento
+    # Sorting and Searching
     'binary-search': 'topics/search-and-sort/binary-search/Binary Search.md',
     'two-pointers': 'topics/search-and-sort/two-pointers/Two Pointers.md',
     'sliding-window': 'topics/search-and-sort/two-pointers/Sliding Window.md',
-    
-    # Técnicas generales
+    'complete-search': 'topics/search-and-sort/complete-search/Complete Search.md',
+
+    # Prefix y Suffix
+    'prefix-sum': 'topics/prefix-suffix/Prefix Sum.md',
+    'suffix-array': 'topics/prefix-suffix/Suffix Array.md',
+    'z-function': 'topics/prefix-suffix/Z Function.md',
+
+    # Techniques
     'greedy': 'topics/techniques/Greedy.md',
     'divide-conquer': 'topics/techniques/Divide and Conquer.md',
     'backtracking': 'topics/techniques/Backtracking.md',
+
+    # Geometry
+    'line-geometry': 'topics/geometry/Line Geometry.md',
+    'sweep-line': 'topics/geometry/Sweep Line.md',
+    'polygon-geometry': 'topics/geometry/Polygon Geometry.md',
+    'convex-hull': 'topics/geometry/Convex Hull.md',
+
+    # Additional Topics
+    'bitwise-operations': 'topics/others/Bitwise Operations.md',
+    'hashing': 'topics/others/Hashing.md',
 }
 
 def get_hierarchical_tags(tags):
@@ -96,65 +111,85 @@ def create_problem_structure(platform, contest, problem_name, tags):
     
     # Crear README template con sintaxis de Obsidian
     readme_content = f"""# {problem_name.replace('-', ' ').title()}
+#competitive-programming #{platform} #[dificultad] {' '.join(hierarchical_tags)}
 
-        **Plataforma:** {platform.title()}
-        **Contest:** {contest if contest and contest != "practice" else 'Practice'}
-        **Dificultad:** [Rating/Nivel]
-        **Fecha de resolución:** {datetime.now().strftime('%Y-%m-%d')}
-        **Tiempo empleado:** [HH:MM]
+**Plataforma:** {platform.title()}
+**Contest:** {contest if contest and contest != "practice" else 'Practice'}
+**Dificultad:** [Rating/Nivel]
+**Fecha de resolución:** {datetime.now().strftime('%d/%m/%Y')}
+**Tiempo empleado:** [HH:MM]
 
-        ## 🔗 Enlaces
-        - **Problema:** [URL del problema]
-        - **Submission:** [URL de submission]
+## 🔗 Enlaces
+- **Problema:** [URL del problema]
+- **Submission:** [URL de submission]
 
-        ## 🏷️ Tags
-        #competitive-programming #{platform} #[dificultad] {' '.join(hierarchical_tags)}
+## 📓 Temas relacionados
+{' '.join(topic_links) if topic_links else '[[Topic 1]] [[Topic 2]]'}
 
-        **Temas relacionados:** {' '.join(topic_links) if topic_links else '[[Topic 1]] [[Topic 2]]'}
+## 📖 Descripción
+[Breve resumen del problema]
 
-        ## 📖 Descripción
-        [Breve resumen del problema]
+## 💡 Enfoque
+[Tu approach y por qué funciona]
 
-        ## 💡 Enfoque
-        [Tu approach y por qué funciona]
+## ⚡ Complejidad
+- **Tiempo:** O(?)
+- **Espacio:** O(?)
 
-        ## ⚡ Complejidad
-        - **Tiempo:** O(?)
-        - **Espacio:** O(?)
+## 🔍 Puntos Clave
+- [Insight importante 1]
+- [Insight importante 2]
 
-        ## 🔍 Puntos Clave
-        - [Insight importante 1]
-        - [Insight importante 2]
+## 📚 Conceptos Aprendidos
+[Qué aprendiste resolviendo este problema]
 
-        ## 📚 Conceptos Aprendidos
-        [Qué aprendiste resolviendo este problema]
+## 🔗 Problemas Relacionados
+- [[Problema Similar 1]]
+- [[Problema Similar 2]]
 
-        ## 🔗 Problemas Relacionados
-        - [[Problema Similar 1]]
-        - [[Problema Similar 2]]
-
-        ## 🔄 Versiones
-        - `solution.cpp` - Solución principal
-    """
-            
+## 🔄 Versiones
+- `solution.cpp` - Solución principal
+"""
+    
     with open(f"{problem_path}/README.md", "w", encoding='utf-8') as f:
         f.write(readme_content)
     
     # Crear archivo de solución
-    solution_template = """
-        // Template de solución
-        #include <bits/stdc++.h>
-        using namespace std;
+    solution_template = """#include <bits/stdc++.h>
 
-        int main() {
-            ios_base::sync_with_stdio(false);
-            cin.tie(NULL);
-            
-            // Tu código aquí
-            
-            return 0;
-        }
-    """
+using namespace std;
+#define cpu()                  \
+  ios::sync_with_stdio(false); \
+  cin.tie(nullptr);
+#define ll long long
+#define lld long double
+const int mod = 1e9 + 7;
+
+ll binPow(ll a, ll b) {
+  a %= mod;
+  ll result = 1;
+  while (b > 0) {
+    if (b & 1LL)
+      result = (result * a) % mod;
+    a = (a * a) % mod;
+    b >>= 1;
+  }
+  return result;
+}
+
+void solve() {}
+
+int main() {
+  cpu();
+  int t;
+  t = 1;
+  // cin >> t;
+  while (t--)
+    solve();
+  return 0;
+}
+
+"""
     
     with open(f"{problem_path}/solution.cpp", "w") as f:
         f.write(solution_template)
@@ -199,82 +234,82 @@ def create_topic_if_not_exists(topic_path):
     
     topic_content = f"""# {topic_name}
 
-        {main_tag} {specific_tag} #algorithm #competitive-programming
+{main_tag} {specific_tag} #algorithm #competitive-programming
 
-        **Tema padre:** {parent_topic}
+**Tema padre:** {parent_topic}
 
-        ## 🎯 Definición
-        [Definición del algoritmo/técnica]
+## 🎯 Definición
+[Definición del algoritmo/técnica]
 
-        ## 🔑 Conceptos Clave
-        - **Concepto 1:** [Explicación]
-        - **Concepto 2:** [Explicación]
-        - **Complejidad:** O(?) tiempo, O(?) espacio
+## 🔑 Conceptos Clave
+- **Concepto 1:** [Explicación]
+- **Concepto 2:** [Explicación]
+- **Complejidad:** O(?) tiempo, O(?) espacio
 
-        ## 💻 Implementación Template
-        ```cpp
-        // Template básico para {topic_name}
-        // Agregar implementación aquí
-        ```
+## 💻 Implementación Template
+```cpp
+// Template básico para {topic_name}
+// Agregar implementación aquí
+```
 
-        ## 🎯 Casos de Uso
-        - [Caso de uso 1]
-        - [Caso de uso 2]
+## 🎯 Casos de Uso
+- [Caso de uso 1]
+- [Caso de uso 2]
 
-        ## 🔗 Conceptos Relacionados
-        - [[Concepto Relacionado 1]]
-        - [[Concepto Relacionado 2]]
+## 🔗 Conceptos Relacionados
+- [[Concepto Relacionado 1]]
+- [[Concepto Relacionado 2]]
 
-        ## 🧠 Problemas Resueltos
-        ### Fácil (800 - 1200)
-        ```dataview
-        LIST file.name
-        FROM {specific_tag} AND #competitive-programming 
-        WHERE contains(file.path, "platforms/") AND (contains(tags, "#easy") OR contains(tags, "#800") OR contains(tags, "#1000") OR contains(tags, "#1200"))
-        SORT fecha DESC
-        \```
+## 🧠 Problemas Resueltos
+### Fácil (800 - 1200)
+```dataview
+LIST file.name
+FROM {specific_tag} AND #competitive-programming 
+WHERE contains(file.path, "platforms/") AND (contains(tags, "#easy") OR contains(tags, "#800") OR contains(tags, "#1000") OR contains(tags, "#1200"))
+SORT fecha DESC
+```
 
-        ### Medio (1200-1600)
-        ```dataview
-        LIST file.name
-        FROM {specific_tag} AND #competitive-programming 
-        WHERE contains(file.path, "platforms/") AND (contains(tags, "#medium") OR contains(tags, "#1400") OR contains(tags, "#1600"))
-        SORT fecha DESC
-        \```
+### Medio (1200-1600)
+```dataview
+LIST file.name
+FROM {specific_tag} AND #competitive-programming 
+WHERE contains(file.path, "platforms/") AND (contains(tags, "#medium") OR contains(tags, "#1400") OR contains(tags, "#1600"))
+SORT fecha DESC
+```
 
-        ### Difícil (1600+)
-        ```dataview
-        LIST file.name
-        FROM {specific_tag} AND #competitive-programming 
-        WHERE contains(file.path, "platforms/") AND (contains(tags, "#hard") OR contains(tags, "#1800") OR contains(tags, "#2000"))
-        SORT fecha DESC
-        \```
+### Difícil (1600+)
+```dataview
+LIST file.name
+FROM {specific_tag} AND #competitive-programming 
+WHERE contains(file.path, "platforms/") AND (contains(tags, "#hard") OR contains(tags, "#1800") OR contains(tags, "#2000"))
+SORT fecha DESC
+```
 
-        ## 🎯 Estado Personal
-        - **Nivel de dominio:** ?/10
-        - **Problemas resueltos:** 
-        ```dataview
-        TABLE rows.length as "Total"
-        FROM {specific_tag} AND #competitive-programming 
-        WHERE contains(file.path, "platforms/")
-        \```
-        - **Última práctica:** 
-        ```dataview
-        LIST file.name
-        FROM {specific_tag} AND #competitive-programming 
-        WHERE contains(file.path, "platforms/")
-        SORT fecha DESC
-        LIMIT 1
-        \```
+## 🎯 Estado Personal
+- **Nivel de dominio:** ?/10
+- **Problemas resueltos:** 
+```dataview
+TABLE rows.length as "Total"
+FROM {specific_tag} AND #competitive-programming 
+WHERE contains(file.path, "platforms/")
+```
+- **Última práctica:** 
+```dataview
+LIST file.name
+FROM {specific_tag} AND #competitive-programming 
+WHERE contains(file.path, "platforms/")
+SORT fecha DESC
+LIMIT 1
+```
 
-        ## 📚 Recursos de Estudio
-        - [Recurso 1](URL)
-        - [Recurso 2](URL)
+## 📚 Recursos de Estudio
+- [Recurso 1](URL)
+- [Recurso 2](URL)
 
-        ## 🏆 Variaciones Importantes
-        - **Variación 1:** [Descripción]
-        - **Variación 2:** [Descripción]
-    """
+## 🏆 Variaciones Importantes
+- **Variación 1:** [Descripción]
+- **Variación 2:** [Descripción]
+"""
     
     with open(topic_path, "w", encoding='utf-8') as f:
         f.write(topic_content)
@@ -297,16 +332,16 @@ def list_available_tags():
             print(f"   • {tag}")
 
 if __name__ == "__main__":
+    if sys.argv[1] == "--list-tags":
+        list_available_tags()
+        sys.exit(0)
+
     if len(sys.argv) < 4:
         print("Uso: python create_problem.py <platform> <contest> <problem_name> [tag1] [tag2]...")
         print("Ejemplo: python create_problem.py codeforces div2-850 A-watermelon bfs implementation")
         print("\nPara ver todos los tags disponibles:")
         print("python create_problem.py --list-tags")
         sys.exit(1)
-    
-    if sys.argv[1] == "--list-tags":
-        list_available_tags()
-        sys.exit(0)
     
     platform = sys.argv[1]
     contest = sys.argv[2]
