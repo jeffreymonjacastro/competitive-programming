@@ -1,19 +1,17 @@
 # Dr. TC
+#competitive-programming #codeforces #Div3 #math #brute-force
 
 **Plataforma:** Codeforces
-**Contest:** [Nombre del contest si aplica]  
-**Dificultad:** [Rating/Nivel]  
-**Fecha de resolución:** [YYYY-MM-DD]  
-**Tiempo empleado:** [HH:MM]  
-
+**Contest:** 1020
+**Dificultad:** 800
+**Fecha de resolución:** 24/04/2025
+**Tiempo empleado:** 9:35 
 ## 🔗 Enlaces
-- **Problema:** [URL del problema]
-- **Submission:** [URL de tu submission si está disponible]
+- **Problema:** https://codeforces.com/contest/2106/problem/A
+- **Submission:** https://codeforces.com/contest/2106/submission/317001674
 
-## 🏷️ Tags
-#competitive-programming #[plataforma] #[dificultad] #[algoritmo] #[estructura-datos]
-
-**Temas relacionados:** [[Dynamic Programming]] [[Graph Theory]] [[Binary Search]]
+## 📓Temas relacionados:
+[[Dynamic Programming]] [[Graph Theory]] [[Binary Search]]
 
 ## 📖 Descripción
 [Breve resumen del problema en tus propias palabras - máximo 2-3 líneas]
@@ -38,6 +36,4 @@
 - [[Problema que usa misma técnica]]
 
 ## 🔄 Versiones
-- `solution.cpp` - Solución principal
-- `solution_v2.py` - Versión alternativa (si existe)
-- `brute_force.cpp` - Solución por fuerza bruta (para comparar)
+- `A.cpp` - Solución principal
