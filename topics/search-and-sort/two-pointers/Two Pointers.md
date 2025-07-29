@@ -1,78 +1,79 @@
 # Two Pointers
 
-        #search-and-sort/two-pointers #search-and-sort/two-pointers/two-pointers #algorithm #competitive-programming
+#search-and-sort/two-pointers #search-and-sort/two-pointers/two-pointers #algorithm #competitive-programming
 
-        **Tema padre:** [[topics/search-and-sort/Search And Sort|Search-And-Sort]]
+**Tema padre:** [[topics/search-and-sort/Search And Sort|Search-And-Sort]]
 
-        ## 🎯 Definición
-        [Definición del algoritmo/técnica]
+## 🎯 Definición
+[Definición del algoritmo/técnica]
 
-        ## 🔑 Conceptos Clave
-        - **Concepto 1:** [Explicación]
-        - **Concepto 2:** [Explicación]
-        - **Complejidad:** O(?) tiempo, O(?) espacio
+## 🔑 Conceptos Clave
+- **Concepto 1:** [Explicación]
+- **Concepto 2:** [Explicación]
+- **Complejidad:** O(?) tiempo, O(?) espacio
 
-        ## 💻 Implementación Template
-        ```cpp
-        // Template básico para Two Pointers
-        // Agregar implementación aquí
-        ```
+## 💻 Implementación Template
+```cpp
+// Template básico para Two Pointers
+// Agregar implementación aquí
+```
 
-        ## 🎯 Casos de Uso
-        - [Caso de uso 1]
-        - [Caso de uso 2]
+## 🎯 Casos de Uso
+- [Caso de uso 1]
+- [Caso de uso 2]
 
-        ## 🔗 Conceptos Relacionados
-        - [[Concepto Relacionado 1]]
-        - [[Concepto Relacionado 2]]
+## 🔗 Conceptos Relacionados
+- [[Concepto Relacionado 1]]
+- [[Concepto Relacionado 2]]
 
-        ## 🧠 Problemas Resueltos
-        ### Fácil (800 - 1200)
-        ```dataview
-        LIST file.name
-        FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
-        WHERE contains(file.path, "platforms/") AND (contains(tags, "#easy") OR contains(tags, "#800") OR contains(tags, "#1000") OR contains(tags, "#1200"))
-        SORT fecha DESC
-        \```
+## 🧠 Problemas Resueltos
+### Fácil (800 - 1200)
+```dataview
+LIST file.name
+FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
+WHERE contains(file.path, "platforms/") AND (contains(tags, "#easy") OR contains(tags, "#800") OR contains(tags, "#1000") OR contains(tags, "#1200"))
+SORT fecha DESC
+```
 
-        ### Medio (1200-1600)
-        ```dataview
-        LIST file.name
-        FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
-        WHERE contains(file.path, "platforms/") AND (contains(tags, "#medium") OR contains(tags, "#1400") OR contains(tags, "#1600"))
-        SORT fecha DESC
-        \```
+### Medio (1200-1600)
+```dataview
+LIST file.name
+FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
+WHERE contains(file.path, "platforms/") AND (contains(tags, "#medium") OR contains(tags, "#1400") OR contains(tags, "#1600"))
+SORT fecha DESC
+```
 
-        ### Difícil (1600+)
-        ```dataview
-        LIST file.name
-        FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
-        WHERE contains(file.path, "platforms/") AND (contains(tags, "#hard") OR contains(tags, "#1800") OR contains(tags, "#2000"))
-        SORT fecha DESC
-        \```
+### Difícil (1600+)
+```dataview
+LIST file.name
+FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
+WHERE contains(file.path, "platforms/") AND (contains(tags, "#hard") OR contains(tags, "#1800") OR contains(tags, "#2000"))
+SORT fecha DESC
+```
 
-        ## 🎯 Estado Personal
-        - **Nivel de dominio:** ?/10
-        - **Problemas resueltos:** 
-        ```dataview
-        TABLE rows.length as "Total"
-        FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
-        WHERE contains(file.path, "platforms/")
-        \```
-        - **Última práctica:** 
-        ```dataview
-        LIST file.name
-        FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
-        WHERE contains(file.path, "platforms/")
-        SORT fecha DESC
-        LIMIT 1
-        \```
+## 🎯 Estado Personal
+- **Nivel de dominio:** ?/10
+- **Problemas resueltos:** 
+```dataview
+TABLE rows.length as "Total"
+FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
+WHERE contains(file.path, "platforms/")
+```
 
-        ## 📚 Recursos de Estudio
-        - [Recurso 1](URL)
-        - [Recurso 2](URL)
+- **Última práctica:** 
+```dataview
+LIST file.name
+FROM #search-and-sort/two-pointers/two-pointers AND #competitive-programming 
+WHERE contains(file.path, "platforms/")
+SORT fecha DESC
+LIMIT 1
+```
 
-        ## 🏆 Variaciones Importantes
-        - **Variación 1:** [Descripción]
-        - **Variación 2:** [Descripción]
+## 📚 Recursos de Estudio
+- [Recurso 1](URL)
+- [Recurso 2](URL)
+
+## 🏆 Variaciones Importantes
+- **Variación 1:** [Descripción]
+- **Variación 2:** [Descripción]
     

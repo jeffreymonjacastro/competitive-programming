@@ -293,6 +293,7 @@ TABLE rows.length as "Total"
 FROM {specific_tag} AND #competitive-programming 
 WHERE contains(file.path, "platforms/")
 ```
+
 - **Última práctica:** 
 ```dataview
 LIST file.name
