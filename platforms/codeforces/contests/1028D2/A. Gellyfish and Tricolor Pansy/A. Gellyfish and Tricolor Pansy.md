@@ -4,7 +4,6 @@ contest: 1028D2
 difficulty: 800
 date: 2025-07-29
 ---
-
 # A. Gellyfish And Tricolor Pansy
 #codeforces #800 #miscellaneous #games #techniques #greedy
 
