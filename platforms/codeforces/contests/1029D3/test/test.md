@@ -2,7 +2,7 @@
 platform: Codeforces
 contest: 1029D3
 difficulty: 1000
-status: 🔴Unresolved
+status: 🟣Review
 date: 2025-07-30
 tags:
   - cp
