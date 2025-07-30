@@ -41,7 +41,7 @@ FROM #graphs AND #competitive-programming
 WHERE contains(file.path, "platforms/")
 GROUP BY file.tags
 SORT rows.length DESC
-\```
+```
 
 ## 🧠 Todos los Problemas de Grafos
 ```dataview
@@ -53,7 +53,7 @@ TABLE
 FROM #graphs AND #competitive-programming 
 WHERE contains(file.path, "platforms/")
 SORT fecha DESC
-\```
+```
 
 ## 🎯 Estado de Aprendizaje
 - [x] Representación de grafos
