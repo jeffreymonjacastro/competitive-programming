@@ -1,5 +1,6 @@
 import os
 import sys
+import shutil
 from datetime import datetime
 
 TAG_TO_PATH = {
@@ -99,10 +100,17 @@ def create_problem_structure(platform, contest, problem_name, tags):
         problem_path = f"{base_path}/practice/{problem_name}"
     
     os.makedirs(problem_path, exist_ok=True)
+
+    # Obtain dificulty rating from tags
+    difficulty = None
+    for tag in tags:
+        if tag.isnumeric():
+            difficulty = tag
+            break
     
     # Obtener tags jerárquicos y rutas de archivos
     hierarchical_tags, topic_paths = get_hierarchical_tags(tags)
-    
+
     # Crear enlaces a temas
     topic_links = []
     for path in topic_paths:
@@ -111,14 +119,15 @@ def create_problem_structure(platform, contest, problem_name, tags):
         topic_links.append(f"[[{path.replace('.md', '')}|{topic_name}]]")
     
     # Crear README template con sintaxis de Obsidian
-    readme_content = f"""# {problem_name.replace('-', ' ').title()}
-#{platform} #[dificultad] {' '.join(hierarchical_tags)}
+    readme_content = f"""---
+platform: {platform.title()}
+contest: {contest if contest and contest != "practice" else 'Practice'}
+difficulty: {difficulty if difficulty else '[Difficulty]'}
+date: {datetime.now().strftime('%Y-%m-%d')}
+---
 
-**Plataforma:** {platform.title()}
-**Contest:** {contest if contest and contest != "practice" else 'Practice'}
-**Dificultad:** [Rating/Nivel]
-**Fecha de resolución:** {datetime.now().strftime('%d/%m/%Y')}
-**Tiempo empleado:** [HH:MM]
+# {problem_name.replace('-', ' ').title()}
+#{platform} #{difficulty if difficulty else '[Difficulty]'} {' '.join(hierarchical_tags)}
 
 ## 🔗 Enlaces
 - **Problema:** [URL del problema]
@@ -156,44 +165,7 @@ def create_problem_structure(platform, contest, problem_name, tags):
         f.write(readme_content)
     
     # Crear archivo de solución
-    solution_template = """#include <bits/stdc++.h>
-
-using namespace std;
-#define cpu()                  \
-  ios::sync_with_stdio(false); \
-  cin.tie(nullptr);
-#define ll long long
-#define lld long double
-const int mod = 1e9 + 7;
-
-ll binPow(ll a, ll b) {
-  a %= mod;
-  ll result = 1;
-  while (b > 0) {
-    if (b & 1LL)
-      result = (result * a) % mod;
-    a = (a * a) % mod;
-    b >>= 1;
-  }
-  return result;
-}
-
-void solve() {}
-
-int main() {
-  cpu();
-  int t;
-  t = 1;
-  // cin >> t;
-  while (t--)
-    solve();
-  return 0;
-}
-
-"""
-    
-    with open(f"{problem_path}/solution.cpp", "w") as f:
-        f.write(solution_template)
+    shutil.copy("templates/template.cpp", f"{problem_path}/solution.cpp")
     
     # Crear archivos de temas si no existen
     for topic_path in topic_paths:

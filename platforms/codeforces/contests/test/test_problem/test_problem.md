@@ -1,19 +1,19 @@
 ---
 platform: Codeforces
-contest: 1028D2
-difficulty: 800
+contest: test
+difficulty: [Difficulty]
 date: 2025-07-29
 ---
 
-# A. Gellyfish And Tricolor Pansy
-#codeforces #800 #miscellaneous #games #techniques #greedy
+# Test_Problem
+#codeforces #[Difficulty] 
 
 ## 🔗 Enlaces
 - **Problema:** [URL del problema]
 - **Submission:** [URL de submission]
 
 ## 📓 Temas relacionados
-[[topics/miscellaneous/Games|Games]] [[topics/techniques/Greedy|Greedy]]
+[[Topic 1]] [[Topic 2]]
 
 ## 📖 Descripción
 [Breve resumen del problema]
