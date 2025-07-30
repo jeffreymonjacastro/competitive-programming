@@ -112,6 +112,7 @@ def create_problem_structure(platform, contest, problem_name, difficulty, tags):
 platform: {platform.title()}
 contest: {contest if contest and contest != "practice" else 'Practice'}
 difficulty: {difficulty if difficulty else 0}
+status: 🔴Unresolved
 date: {datetime.now().strftime('%Y-%m-%d')}
 tags:
   - cp
