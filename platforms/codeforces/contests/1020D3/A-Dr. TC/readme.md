@@ -1,5 +1,5 @@
 # Dr. TC
-#competitive-programming #codeforces #Div3 #math #brute-force
+#dp #codeforces #Div3 #math #brute-force
 
 **Plataforma:** Codeforces
 **Contest:** 1020

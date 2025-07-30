@@ -3,22 +3,22 @@
 ## 📊 Resumen Hoy
 **Problemas resueltos hoy:**
 ```dataview
-TABLE file.name as "Problema", plataforma as "Plataforma"
-FROM #competitive-programming 
-WHERE contains(file.path, "platforms/") AND fecha = date(today)
-\```
+TABLE platform, difficulty 
+FROM #cp
+WHERE date = date(today)
+```
 
 ## 🎯 Por Tema (Top 5)
 ```dataview
 TABLE 
     rows.length as "Problemas",
     choice(rows.length > 20, "🏆", choice(rows.length > 10, "🥇", choice(rows.length > 5, "🥈", "🥉"))) as "Nivel"
-FROM #competitive-programming 
+FROM #cp
 WHERE contains(file.path, "platforms/")
 GROUP BY split(filter(file.tags, (t) => startswith(t, "#graphs") OR startswith(t, "#dp") OR startswith(t, "#math")), "/")[0]
 SORT rows.length DESC
 LIMIT 5
-\```
+```
 
 ## 🔄 Necesitan Repaso
 ```dataview
