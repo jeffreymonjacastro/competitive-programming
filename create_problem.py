@@ -113,6 +113,7 @@ contest: {contest if contest and contest != "practice" else 'Practice'}
 difficulty: {difficulty if difficulty else 0}
 date: {datetime.now().strftime('%Y-%m-%d')}
 tags:
+  - cp
 {('\n').join(f'  - {tag}' for tag in hierarchical_tags)}
 ---
 # [{problem_name.replace('-', ' ').title()}](link)

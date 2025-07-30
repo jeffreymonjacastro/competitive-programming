@@ -4,6 +4,7 @@ contest: 1020D3
 difficulty: 1500
 date: 2025-07-30
 tags:
+  - cp
   - binary-search
   - dp
   - dynamic-programming

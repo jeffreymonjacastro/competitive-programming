@@ -4,6 +4,7 @@ contest: 1028D2
 difficulty: 800
 date: 2025-07-30
 tags:
+  - cp
   - games
   - greedy
   - miscellaneous
