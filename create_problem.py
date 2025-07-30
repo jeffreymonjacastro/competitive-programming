@@ -101,12 +101,8 @@ def create_problem_structure(platform, contest, problem_name, tags):
     
     os.makedirs(problem_path, exist_ok=True)
 
-    # Obtain dificulty rating from tags
-    difficulty = None
-    for tag in tags:
-        if tag.isnumeric():
-            difficulty = tag
-            break
+    # Obtain difficulty rating from tags
+    difficulty = next((tag for tag in tags if tag.isnumeric()), None)
     
     # Obtener tags jerárquicos y rutas de archivos
     hierarchical_tags, topic_paths = get_hierarchical_tags(tags)
@@ -129,38 +125,31 @@ tags:
   - {difficulty if difficulty else 'no-difficulty'}
 {('\n').join(f'  - {tag}' for tag in hierarchical_tags)}
 ---
-# {problem_name.replace('-', ' ').title()}
+# [{problem_name.replace('-', ' ').title()}](link)
 
-## 🔗 Enlaces
-- **Problema:** [URL del problema]
-- **Submission:** [URL de submission]
+## 📓 Related Topics
+{('\n').join(f'- {link}' for link in topic_links) if topic_links else '[[Topic 1]] [[Topic 2]]'}
 
-## 📓 Temas relacionados
-{' '.join(topic_links) if topic_links else '[[Topic 1]] [[Topic 2]]'}
+## 📖 Description
+[Brief summary of the problem]
 
-## 📖 Descripción
-[Breve resumen del problema]
+## 💡 Approach
+[Your approach and why it works]
 
-## 💡 Enfoque
-[Tu approach y por qué funciona]
+## ⚡ Complexity
+- **Time:** O(?)
+- **Space:** O(?)
 
-## ⚡ Complejidad
-- **Tiempo:** O(?)
-- **Espacio:** O(?)
+## 🔍 Key Points
+- [Important insight 1]
+- [Important insight 2]
 
-## 🔍 Puntos Clave
-- [Insight importante 1]
-- [Insight importante 2]
+## 🔗 Related Problems
+- [[Similar Problem 1]]
+- [[Similar Problem 2]]
 
-## 📚 Conceptos Aprendidos
-[Qué aprendiste resolviendo este problema]
-
-## 🔗 Problemas Relacionados
-- [[Problema Similar 1]]
-- [[Problema Similar 2]]
-
-## 🔄 Versiones
-- `solution.cpp` - Solución principal
+## 🔄 Versions
+- `solution.cpp` - Main solution 
 """
 
     with open(f"{problem_path}/{problem_name.replace('-', ' ')}.md", "w", encoding='utf-8') as f:
