@@ -1,6 +1,6 @@
-# Dynamic-Programming
+# Games
 
-**Parent Topic:** [[topics/dynamic-programming/Dynamic Programming|Dynamic-Programming]]
+**Parent Topic:** [[topics/miscellaneous/Miscellaneous|Miscellaneous]]
 
 ## 🎯 Definition
 [Algorithm/technique definition]
@@ -12,7 +12,7 @@
 
 ## 💻 Implementation Template
 ```cpp
-// Basic template for Dynamic-Programming
+// Basic template for Games
 // Add implementation here
 ```
 
@@ -28,7 +28,7 @@
 ### Easy (800 - 1200)
 ```dataview
 TABLE platform, difficulty, date
-FROM #Dynamic-Programming
+FROM #Games
 WHERE contains(file.path, "platforms/") AND difficulty >= 800 AND difficulty <= 1200
 SORT date DESC
 ```
@@ -36,7 +36,7 @@ SORT date DESC
 ### Medium (1200-1600)
 ```dataview
 TABLE platform, difficulty, date
-FROM #Dynamic-Programming
+FROM #Games
 WHERE contains(file.path, "platforms/") AND difficulty > 1200 AND difficulty <= 1600
 SORT date DESC
 ```
@@ -44,7 +44,7 @@ SORT date DESC
 ### Hard (1600+)
 ```dataview
 TABLE platform, difficulty, date
-FROM #Dynamic-Programming
+FROM #Games
 WHERE contains(file.path, "platforms/") AND difficulty > 1600
 SORT date DESC
 ```
@@ -54,14 +54,14 @@ SORT date DESC
 - **Problems Solved:** 
 ```dataview
 TABLE rows.length as "Total"
-FROM #Dynamic-Programming
+FROM #Games
 WHERE contains(file.path, "platforms/")
 ```
 
 - **Last Practice:** 
 ```dataview
 TABLE platform, date
-FROM #Dynamic-Programming
+FROM #Games
 WHERE contains(file.path, "platforms/")
 SORT date DESC
 LIMIT 1

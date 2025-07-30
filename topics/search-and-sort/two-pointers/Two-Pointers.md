@@ -29,7 +29,7 @@
 ```dataview
 TABLE platform, difficulty, date
 FROM #Two-Pointers
-WHERE contains(file.path, "platforms/") AND (contains(tags, "#800") OR contains(tags, "#1000") OR contains(tags, "#1200"))
+WHERE contains(file.path, "platforms/") AND difficulty >= 800 AND difficulty <= 1200
 SORT date DESC
 ```
 
@@ -37,7 +37,7 @@ SORT date DESC
 ```dataview
 TABLE platform, difficulty, date
 FROM #Two-Pointers
-WHERE contains(file.path, "platforms/") AND (contains(tags, "#medium") OR contains(tags, "#1400") OR contains(tags, "#1600"))
+WHERE contains(file.path, "platforms/") AND difficulty > 1200 AND difficulty <= 1600
 SORT date DESC
 ```
 
@@ -45,7 +45,7 @@ SORT date DESC
 ```dataview
 TABLE platform, difficulty, date
 FROM #Two-Pointers
-WHERE contains(file.path, "platforms/") AND (contains(tags, "#hard") OR contains(tags, "#1800") OR contains(tags, "#2000"))
+WHERE contains(file.path, "platforms/") AND difficulty > 1600
 SORT date DESC
 ```
 
