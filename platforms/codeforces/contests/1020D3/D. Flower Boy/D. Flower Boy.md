@@ -15,11 +15,7 @@ tags:
   - search-and-sort/two-pointers
   - two-pointers
 ---
-<<<<<<< HEAD
-# [D. Flower Boy](https://www.google.com)
-=======
 # [D. Flower Boy](link)
->>>>>>> origin/main
 
 ## 📓 Related Topics
 - [[topics/search-and-sort/binary-search/Binary-Search|Binary-Search]]
@@ -27,8 +23,6 @@ tags:
 - [[topics/techniques/Greedy|Greedy]]
 - [[topics/search-and-sort/two-pointers/Two-Pointers|Two-Pointers]]
 
-<<<<<<< HEAD
-## [hello](https://hello)
 ## 📓 Temas relacionados
 [[topics/search-and-sort/binary-search/Binary-Search|Binary-Search]] [[topics/dynamic-programming/Dynamic-Programming|Dynamic-Programming]] [[topics/techniques/Greedy|Greedy]] [[topics/search-and-sort/two-pointers/Two-Pointers|Two-Pointers]]
 =======
