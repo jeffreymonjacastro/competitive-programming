@@ -1,5 +1,5 @@
 # Dr. TC
-#dp #codeforces #Div3 #math #brute-force
+#cp #codeforces #Div3 #math #brute-force
 
 **Plataforma:** Codeforces
 **Contest:** 1020

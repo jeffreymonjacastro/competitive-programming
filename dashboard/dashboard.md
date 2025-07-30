@@ -9,14 +9,18 @@ WHERE date = date(today)
 ```
 
 ## 🎯 Por Tema (Top 5)
+
 ```dataview
-TABLE 
-    rows.length as "Problemas",
-    choice(rows.length > 20, "🏆", choice(rows.length > 10, "🥇", choice(rows.length > 5, "🥈", "🥉"))) as "Nivel"
-FROM #cp
+TABLE length(rows) as Problems
+FROM #cp 
 WHERE contains(file.path, "platforms/")
-GROUP BY split(filter(file.tags, (t) => startswith(t, "#graphs") OR startswith(t, "#dp") OR startswith(t, "#math")), "/")[0]
-SORT rows.length DESC
+FLATTEN filter(
+	file.tags, (t) => 
+	t != "#cp" AND
+	t != "#codeforces"
+) as tags
+GROUP BY tags
+SORT length(rows) DESC
 LIMIT 5
 ```
 
