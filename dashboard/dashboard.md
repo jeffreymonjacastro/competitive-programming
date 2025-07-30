@@ -1,19 +1,15 @@
- 🏆 Dashboard de Programación Competitiva
-
-## 📊 Resumen Hoy
-**Problemas resueltos hoy:**
+# Dashboard
+## 📊 Today
 ```dataview
-TABLE platform, difficulty 
+TABLE platform, status, difficulty 
 FROM #cp
-WHERE date = date(today)
+WHERE date = date(today) 
 ```
 
-## 🎯 Por Tema (Top 5)
-
+## 🎯 Top 5 most solved topics
 ```dataview
 TABLE length(rows) as Problems
 FROM #cp 
-WHERE contains(file.path, "platforms/")
 FLATTEN filter(
 	file.tags, (t) => 
 	t != "#cp" AND
@@ -24,13 +20,13 @@ SORT length(rows) DESC
 LIMIT 5
 ```
 
-## 🔄 Necesitan Repaso
+## 🔄 Needs Review Problems
 ```dataview
-LIST file.name
-FROM #competitive-programming AND #needs-review
-WHERE contains(file.path, "platforms/")
+TABLE platform, difficulty
+FROM #cp 
+WHERE status = "🟣review"
 LIMIT 10
-\```
+```
 
 ## 📈 Progreso por Dificultad
 ```dataview

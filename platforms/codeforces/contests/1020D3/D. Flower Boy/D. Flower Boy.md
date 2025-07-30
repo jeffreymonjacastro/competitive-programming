@@ -2,7 +2,7 @@
 platform: Codeforces
 contest: 1020D3
 difficulty: 1500
-status: 🔴Unresolved
+status: 🟡Todo
 date: 2025-07-30
 tags:
   - cp
