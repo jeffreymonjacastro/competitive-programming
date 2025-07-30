@@ -69,7 +69,7 @@ TAG_TO_PATH = {
 }
 
 def get_hierarchical_tags(tags):
-    """Convierte tags simples a tags jerárquicos"""
+    """Converts tags to hierarchical format and returns paths"""
     hierarchical_tags = []
     tag_paths = []
     
@@ -78,21 +78,19 @@ def get_hierarchical_tags(tags):
             path = TAG_TO_PATH[tag]
             tag_paths.append(path)
             
-            # Crear tag jerárquico basado en la ruta
-            parts = path.split('/')[1:-1]  # Excluir 'topics' y el archivo .md
-            if parts:
-                hierarchical_tag = '/'.join(parts).replace('-', '-')
-                if hierarchical_tag not in hierarchical_tags:
-                    hierarchical_tags.append(hierarchical_tag)
-            
+            parts = path.split('/')[1:-1]  
+
+            print(f"{tag} parts: {parts}")
+            if parts[0] not in hierarchical_tags:
+                hierarchical_tags.append(parts[0])
+
             # Agregar tag específico
             specific_tag = tag.replace('-', '-')
             hierarchical_tags.append(specific_tag)
-    
-    return hierarchical_tags, tag_paths
 
-def create_problem_structure(platform, contest, problem_name, tags):
-    # Crear estructura de directorios
+    return sorted(hierarchical_tags), sorted(tag_paths)
+
+def create_problem_structure(platform, contest, problem_name, difficulty, tags):
     base_path = f"platforms/{platform}"
     if contest and contest != "practice":
         problem_path = f"{base_path}/contests/{contest}/{problem_name}"
@@ -101,34 +99,26 @@ def create_problem_structure(platform, contest, problem_name, tags):
     
     os.makedirs(problem_path, exist_ok=True)
 
-    # Obtain difficulty rating from tags
-    difficulty = next((tag for tag in tags if tag.isnumeric()), None)
-    
-    # Obtener tags jerárquicos y rutas de archivos
+    # Obtain hierarchical tags and file paths
     hierarchical_tags, topic_paths = get_hierarchical_tags(tags)
 
-    # Crear enlaces a temas
     topic_links = []
     for path in topic_paths:
-        # Convertir ruta a nombre legible para el enlace
         topic_name = path.split('/')[-1].replace('.md', '')
         topic_links.append(f"[[{path.replace('.md', '')}|{topic_name}]]")
     
-    # Crear README template con sintaxis de Obsidian
     readme_content = f"""---
 platform: {platform.title()}
 contest: {contest if contest and contest != "practice" else 'Practice'}
-difficulty: {difficulty if difficulty else '[Difficulty]'}
+difficulty: {difficulty if difficulty else 0}
 date: {datetime.now().strftime('%Y-%m-%d')}
-tags: 
-  - {platform.lower()}
-  - {difficulty if difficulty else 'no-difficulty'}
+tags:
 {('\n').join(f'  - {tag}' for tag in hierarchical_tags)}
 ---
 # [{problem_name.replace('-', ' ').title()}](link)
 
 ## 📓 Related Topics
-{('\n').join(f'- {link}' for link in topic_links) if topic_links else '[[Topic 1]] [[Topic 2]]'}
+{('\n').join(f'- {link}' for link in topic_links) if topic_links else '[Topic 1] [Topic 2]'}
 
 ## 📖 Description
 [Brief summary of the problem]
@@ -155,10 +145,8 @@ tags:
     with open(f"{problem_path}/{problem_name.replace('-', ' ')}.md", "w", encoding='utf-8') as f:
         f.write(readme_content)
     
-    # Crear archivo de solución
     shutil.copy("templates/template.cpp", f"{problem_path}/solution.cpp")
     
-    # Crear archivos de temas si no existen
     for topic_path in topic_paths:
         create_topic_if_not_exists(topic_path)
     
@@ -169,109 +157,97 @@ tags:
     print(f"📚 Temas vinculados: {len(topic_paths)}")
 
 def create_topic_if_not_exists(topic_path):
-    """Crea un archivo de tema jerárquico si no existe"""
+    """Creates a hierarchical topic file if it does not exist"""
     if os.path.exists(topic_path):
         return
-    
-    # Crear directorio si no existe
+
     os.makedirs(os.path.dirname(topic_path), exist_ok=True)
-    
-    # Determinar el tipo de archivo basado en la ruta
+
     parts = topic_path.split('/')
     topic_name = parts[-1].replace('.md', '')
     category = parts[1] if len(parts) > 1 else 'general'
     subcategory = parts[2] if len(parts) > 2 else None
     
-    # Crear tag jerárquico
-    if subcategory:
-        main_tag = f"#{category}/{subcategory}"
-        specific_tag = f"#{category}/{subcategory}/{topic_name.lower().replace(' ', '-')}"
-    else:
-        main_tag = f"#{category}"
-        specific_tag = f"#{category}/{topic_name.lower().replace(' ', '-')}"
+    specific_tag = f"#{topic_name}"
     
-    # Determinar tema padre
-    if subcategory:
-        parent_topic = f"[[topics/{category}/{category.title().replace('-', ' ')}|{category.title()}]]"
-    else:
-        parent_topic = "[[Competitive Programming]]"
+    parent_topic = f"[[topics/{category}/{category.title().replace('-', ' ')}|{category.title()}]]"
     
     topic_content = f"""# {topic_name}
 
-**Tema padre:** {parent_topic}
+**Parent Topic:** {parent_topic}
 
-## 🎯 Definición
-[Definición del algoritmo/técnica]
+## 🎯 Definition
+[Algorithm/technique definition]
 
-## 🔑 Conceptos Clave
-- **Concepto 1:** [Explicación]
-- **Concepto 2:** [Explicación]
-- **Complejidad:** O(?) tiempo, O(?) espacio
+## 🔑 Key Concepts
+- **Concept 1:** [Explanation]
+- **Concept 2:** [Explanation]
+- **Complexity:** O(?) time, O(?) space
 
-## 💻 Implementación Template
+## 💻 Implementation Template
 ```cpp
-// Template básico para {topic_name}
-// Agregar implementación aquí
+// Basic template for {topic_name}
+// Add implementation here
 ```
 
-## 🎯 Casos de Uso
-- [Caso de uso 1]
-- [Caso de uso 2]
+## 🎯 Use Cases
+- [Use case 1]
+- [Use case 2]
 
-## 🔗 Conceptos Relacionados
-- [[Concepto Relacionado 1]]
-- [[Concepto Relacionado 2]]
+## 🔗 Related Concepts
+- [Related Concept 1]
+- [Related Concept 2]
 
-## 🧠 Problemas Resueltos
-### Fácil (800 - 1200)
+## 🧠 Solved Problems
+### Easy (800 - 1200)
 ```dataview
-LIST file.name
-FROM {specific_tag} AND #competitive-programming 
-WHERE contains(file.path, "platforms/") AND (contains(tags, "#easy") OR contains(tags, "#800") OR contains(tags, "#1000") OR contains(tags, "#1200"))
-SORT fecha DESC
+TABLE platform, difficulty, date
+FROM {specific_tag}
+WHERE contains(file.path, "platforms/") AND (contains(tags, "#800") OR contains(tags, "#1000") OR contains(tags, "#1200"))
+SORT date DESC
 ```
 
-### Medio (1200-1600)
+### Medium (1200-1600)
 ```dataview
-LIST file.name
-FROM {specific_tag} AND #competitive-programming 
+TABLE platform, difficulty, date
+FROM {specific_tag}
 WHERE contains(file.path, "platforms/") AND (contains(tags, "#medium") OR contains(tags, "#1400") OR contains(tags, "#1600"))
-SORT fecha DESC
+SORT date DESC
 ```
 
-### Difícil (1600+)
+### Hard (1600+)
 ```dataview
-LIST file.name
-FROM {specific_tag} AND #competitive-programming 
+TABLE platform, difficulty, date
+FROM {specific_tag}
 WHERE contains(file.path, "platforms/") AND (contains(tags, "#hard") OR contains(tags, "#1800") OR contains(tags, "#2000"))
-SORT fecha DESC
+SORT date DESC
 ```
 
-## 🎯 Estado Personal
-- **Nivel de dominio:** ?/10
-- **Problemas resueltos:** 
+## 🎯 Personal Status
+- **Mastery Level:** ?/10
+- **Problems Solved:** 
 ```dataview
 TABLE rows.length as "Total"
-FROM {specific_tag} AND #competitive-programming 
+FROM {specific_tag}
 WHERE contains(file.path, "platforms/")
 ```
 
-- **Última práctica:** 
+- **Last Practice:** 
 ```dataview
-LIST file.name
-FROM {specific_tag} AND #competitive-programming 
+TABLE platform, date
+FROM {specific_tag}
 WHERE contains(file.path, "platforms/")
-SORT fecha DESC
+SORT date DESC
 LIMIT 1
 ```
 
-## 📚 Recursos de Estudio
-- [Recurso 1](URL)
-- [Recurso 2](URL)
+## 📚 Study Resources
+- [Resource 1](URL)
+- [Resource 2](URL)
 
-## 🏆 Variaciones Importantes
-- **Variación 1:** [Descripción]
-- **Variación 2:** [Descripción]
+## 🏆 Important Variations
+- **Variation 1:** [Description]
+- **Variation 2:** [Description]
 """
     
     with open(topic_path, "w", encoding='utf-8') as f:
@@ -300,7 +276,7 @@ if __name__ == "__main__":
         sys.exit(0)
 
     if len(sys.argv) < 4:
-        print("Uso: python create_problem.py <platform> <contest> <problem_name> [tag1] [tag2]...")
+        print("Uso: python create_problem.py <platform> <contest> <problem_name> <difficulty> [tag1] [tag2]...")
         print("Ejemplo: python create_problem.py codeforces div2-850 A-watermelon bfs implementation")
         print("\nPara ver todos los tags disponibles:")
         print("python create_problem.py --list-tags")
@@ -309,12 +285,13 @@ if __name__ == "__main__":
     platform = sys.argv[1]
     contest = sys.argv[2]
     problem_name = sys.argv[3]
-    tags = sys.argv[4:] if len(sys.argv) > 4 else []
-    
+    difficulty = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4].isdigit() else None
+    tags = sys.argv[5:] if len(sys.argv) > 5 else []
+
     if not tags:
         print("⚠️  Advertencia: No se especificaron tags. Se creará el problema sin enlaces automáticos a temas.")
         response = input("¿Continuar? (y/N): ")
         if response.lower() != 'y':
             sys.exit(0)
-    
-    create_problem_structure(platform, contest, problem_name, tags)
+
+    create_problem_structure(platform, contest, problem_name, difficulty, tags)

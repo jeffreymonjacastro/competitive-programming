@@ -3,25 +3,22 @@ platform: Codeforces
 contest: 1020D3
 difficulty: 1500
 date: 2025-07-30
-tags: 
-  - codeforces
-  - 1500
-  - search-and-sort/binary-search
+tags:
   - binary-search
-  - dynamic-programming
   - dp
-  - techniques
+  - dynamic-programming
   - greedy
-  - search-and-sort/two-pointers
+  - search-and-sort
+  - techniques
   - two-pointers
 ---
 # [D. Flower Boy](link)
 
 ## 📓 Related Topics
-- [[topics/search-and-sort/binary-search/Binary-Search|Binary-Search]]
 - [[topics/dynamic-programming/Dynamic-Programming|Dynamic-Programming]]
-- [[topics/techniques/Greedy|Greedy]]
+- [[topics/search-and-sort/binary-search/Binary-Search|Binary-Search]]
 - [[topics/search-and-sort/two-pointers/Two-Pointers|Two-Pointers]]
+- [[topics/techniques/Greedy|Greedy]]
 
 ## 📖 Description
 [Brief summary of the problem]

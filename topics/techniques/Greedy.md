@@ -1,79 +1,76 @@
-
-
-
 # Greedy
 
-**Tema padre:** [[topics/techniques/Techniques|Techniques]]
+**Parent Topic:** [[topics/techniques/Techniques|Techniques]]
 
-## 🎯 Definición
-[Definición del algoritmo/técnica]
+## 🎯 Definition
+[Algorithm/technique definition]
 
-## 🔑 Conceptos Clave
-- **Concepto 1:** [Explicación]
-- **Concepto 2:** [Explicación]
-- **Complejidad:** O(?) tiempo, O(?) espacio
+## 🔑 Key Concepts
+- **Concept 1:** [Explanation]
+- **Concept 2:** [Explanation]
+- **Complexity:** O(?) time, O(?) space
 
-## 💻 Implementación Template
+## 💻 Implementation Template
 ```cpp
-// Template básico para Greedy
-// Agregar implementación aquí
+// Basic template for Greedy
+// Add implementation here
 ```
 
-## 🎯 Casos de Uso
-- [Caso de uso 1]
-- [Caso de uso 2]
+## 🎯 Use Cases
+- [Use case 1]
+- [Use case 2]
 
-## 🔗 Conceptos Relacionados
-- [[Concepto Relacionado 1]]
-- [[Concepto Relacionado 2]]
+## 🔗 Related Concepts
+- [Related Concept 1]
+- [Related Concept 2]
 
-## 🧠 Problemas Resueltos
-### Fácil (800 - 1200)
+## 🧠 Solved Problems
+### Easy (800 - 1200)
 ```dataview
-LIST file.name
-FROM #techniques/Greedy.md/greedy AND #competitive-programming 
-WHERE contains(file.path, "platforms/") AND (contains(tags, "#easy") OR contains(tags, "#800") OR contains(tags, "#1000") OR contains(tags, "#1200"))
-SORT fecha DESC
+TABLE platform, difficulty, date
+FROM #Greedy
+WHERE contains(file.path, "platforms/") AND (contains(tags, "#800") OR contains(tags, "#1000") OR contains(tags, "#1200"))
+SORT date DESC
 ```
 
-### Medio (1200-1600)
+### Medium (1200-1600)
 ```dataview
-LIST file.name
-FROM #techniques/Greedy.md/greedy AND #competitive-programming 
+TABLE platform, difficulty, date
+FROM #Greedy
 WHERE contains(file.path, "platforms/") AND (contains(tags, "#medium") OR contains(tags, "#1400") OR contains(tags, "#1600"))
-SORT fecha DESC
+SORT date DESC
 ```
 
-### Difícil (1600+)
+### Hard (1600+)
 ```dataview
-LIST file.name
-FROM #techniques/Greedy.md/greedy AND #competitive-programming 
+TABLE platform, difficulty, date
+FROM #Greedy
 WHERE contains(file.path, "platforms/") AND (contains(tags, "#hard") OR contains(tags, "#1800") OR contains(tags, "#2000"))
-SORT fecha DESC
+SORT date DESC
 ```
 
-## 🎯 Estado Personal
-- **Nivel de dominio:** ?/10
-- **Problemas resueltos:** 
+## 🎯 Personal Status
+- **Mastery Level:** ?/10
+- **Problems Solved:** 
 ```dataview
 TABLE rows.length as "Total"
-FROM #techniques/Greedy.md/greedy AND #competitive-programming 
+FROM #Greedy
 WHERE contains(file.path, "platforms/")
 ```
 
-- **Última práctica:** 
+- **Last Practice:** 
 ```dataview
-LIST file.name
-FROM #techniques/Greedy.md/greedy AND #competitive-programming 
+TABLE platform, date
+FROM #Greedy
 WHERE contains(file.path, "platforms/")
-SORT fecha DESC
+SORT date DESC
 LIMIT 1
 ```
 
-## 📚 Recursos de Estudio
-- [Recurso 1](URL)
-- [Recurso 2](URL)
+## 📚 Study Resources
+- [Resource 1](URL)
+- [Resource 2](URL)
 
-## 🏆 Variaciones Importantes
-- **Variación 1:** [Descripción]
-- **Variación 2:** [Descripción]
+## 🏆 Important Variations
+- **Variation 1:** [Description]
+- **Variation 2:** [Description]

@@ -3,13 +3,11 @@ platform: Codeforces
 contest: 1028D2
 difficulty: 800
 date: 2025-07-30
-tags: 
-  - codeforces
-  - 800
-  - miscellaneous
+tags:
   - games
-  - techniques
   - greedy
+  - miscellaneous
+  - techniques
 ---
 # [A. Gellyfish And Tricolor Pansy](link)
 
