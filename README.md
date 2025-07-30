@@ -14,3 +14,4 @@ Hello World
 TABLE platform, contest, difficulty, date, tags
 FROM #greedy 
 ```
+
