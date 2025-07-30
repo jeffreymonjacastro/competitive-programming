@@ -15,36 +15,41 @@ tags:
   - search-and-sort/two-pointers
   - two-pointers
 ---
+<<<<<<< HEAD
 # [D. Flower Boy](https://www.google.com)
+=======
+# [D. Flower Boy](link)
+>>>>>>> origin/main
 
-## 🔗 Enlaces
-- **Problema:** [URL del problema]
-- **Submission:** [URL de submission]
+## 📓 Related Topics
+- [[topics/search-and-sort/binary-search/Binary-Search|Binary-Search]]
+- [[topics/dynamic-programming/Dynamic-Programming|Dynamic-Programming]]
+- [[topics/techniques/Greedy|Greedy]]
+- [[topics/search-and-sort/two-pointers/Two-Pointers|Two-Pointers]]
 
+<<<<<<< HEAD
 ## [hello](https://hello)
 ## 📓 Temas relacionados
 [[topics/search-and-sort/binary-search/Binary-Search|Binary-Search]] [[topics/dynamic-programming/Dynamic-Programming|Dynamic-Programming]] [[topics/techniques/Greedy|Greedy]] [[topics/search-and-sort/two-pointers/Two-Pointers|Two-Pointers]]
+=======
+## 📖 Description
+[Brief summary of the problem]
+>>>>>>> origin/main
 
-## 📖 Descripción
-[Breve resumen del problema]
+## 💡 Approach
+[Your approach and why it works]
 
-## 💡 Enfoque
-[Tu approach y por qué funciona]
+## ⚡ Complexity
+- **Time:** O(?)
+- **Space:** O(?)
 
-## ⚡ Complejidad
-- **Tiempo:** O(?)
-- **Espacio:** O(?)
+## 🔍 Key Points
+- [Important insight 1]
+- [Important insight 2]
 
-## 🔍 Puntos Clave
-- [Insight importante 1]
-- [Insight importante 2]
+## 🔗 Related Problems
+- [[Similar Problem 1]]
+- [[Similar Problem 2]]
 
-## 📚 Conceptos Aprendidos
-[Qué aprendiste resolviendo este problema]
-
-## 🔗 Problemas Relacionados
-- [[Problema Similar 1]]
-- [[Problema Similar 2]]
-
-## 🔄 Versiones
-- `solution.cpp` - Solución principal
+## 🔄 Versions
+- `solution.cpp` - Main solution 
