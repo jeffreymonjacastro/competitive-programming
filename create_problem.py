@@ -83,11 +83,11 @@ def get_hierarchical_tags(tags):
             if parts:
                 hierarchical_tag = '/'.join(parts).replace('-', '-')
                 if hierarchical_tag not in hierarchical_tags:
-                    hierarchical_tags.append(f"#{hierarchical_tag}")
+                    hierarchical_tags.append(hierarchical_tag)
             
             # Agregar tag específico
             specific_tag = tag.replace('-', '-')
-            hierarchical_tags.append(f"#{specific_tag}")
+            hierarchical_tags.append(specific_tag)
     
     return hierarchical_tags, tag_paths
 
@@ -124,10 +124,12 @@ platform: {platform.title()}
 contest: {contest if contest and contest != "practice" else 'Practice'}
 difficulty: {difficulty if difficulty else '[Difficulty]'}
 date: {datetime.now().strftime('%Y-%m-%d')}
+tags: 
+  - {platform.lower()}
+  - {difficulty if difficulty else 'no-difficulty'}
+{('\n').join(f'  - {tag}' for tag in hierarchical_tags)}
 ---
-
 # {problem_name.replace('-', ' ').title()}
-#{platform} #{difficulty if difficulty else '[Difficulty]'} {' '.join(hierarchical_tags)}
 
 ## 🔗 Enlaces
 - **Problema:** [URL del problema]

@@ -1,11 +1,21 @@
+---
+platform: Codeforces
+contest: 1020D3
+difficulty: 1500
+date: 2025-07-30
+tags: 
+  - codeforces
+  - 1500
+  - search-and-sort/binary-search
+  - binary-search
+  - dynamic-programming
+  - dp
+  - techniques
+  - greedy
+  - search-and-sort/two-pointers
+  - two-pointers
+---
 # D. Flower Boy
-#codeforces #[dificultad] #search-and-sort/binary-search #binary-search #dynamic-programming #dp #techniques #greedy #search-and-sort/two-pointers #two-pointers
-
-**Plataforma:** Codeforces
-**Contest:** 1020D3
-**Dificultad:** [Rating/Nivel]
-**Fecha de resolución:** 29/07/2025
-**Tiempo empleado:** [HH:MM]
 
 ## 🔗 Enlaces
 - **Problema:** [URL del problema]

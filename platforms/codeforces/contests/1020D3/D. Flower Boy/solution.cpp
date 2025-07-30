@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-#define cpu()                    ios::sync_with_stdio(false);   cin.tie(nullptr);
+#define cpu()                  \
+  ios::sync_with_stdio(false); \
+  cin.tie(nullptr);
 #define ll long long
 #define lld long double
 const int mod = 1e9 + 7;
@@ -29,4 +31,3 @@ int main() {
     solve();
   return 0;
 }
-
