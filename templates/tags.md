@@ -1,6 +1,6 @@
 # Main Tags
 ## Tags
-+ competitive-programming
++ cp
 ## Platforms
 + codeforces
 + atcoder

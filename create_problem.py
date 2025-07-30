@@ -45,6 +45,7 @@ TAG_TO_PATH = {
     'two-pointers': 'topics/search-and-sort/two-pointers/Two-Pointers.md',
     'sliding-window': 'topics/search-and-sort/two-pointers/Sliding-Window.md',
     'complete-search': 'topics/search-and-sort/complete-search/Complete-Search.md',
+    'brute-force': 'topics/search-and-sort/brute-force/Brute-Force.md',
 
     # Prefix y Suffix
     'prefix-sum': 'topics/prefix-suffix/Prefix-Sum.md',
