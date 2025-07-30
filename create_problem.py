@@ -248,6 +248,10 @@ LIMIT 1
 ## 🏆 Important Variations
 - **Variation 1:** [Description]
 - **Variation 2:** [Description]
+
+## 📝 Notes
+- [ ] Problem 1
+- [ ] Problem 2
 """
     
     with open(topic_path, "w", encoding='utf-8') as f:

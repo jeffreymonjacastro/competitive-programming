@@ -1,42 +1,42 @@
-# [Nombre del Problema]
-#competitive-programming #[plataforma] #[dificultad] #[algoritmo] #[estructura-datos]
+---
+platform: Codeforces
+contest: 1020D3
+difficulty: 1500
+date: 2025-07-30
+tags:
+  - binary-search
+  - dp
+  - dynamic-programming
+  - greedy
+  - search-and-sort
+  - techniques
+  - two-pointers
+---
+# [D. Flower Boy](link)
 
-**Plataforma:** [CodeForces/AtCoder/LeetCode/etc.]  
-**Contest:** [Nombre del contest si aplica]  
-**Dificultad:** [Rating/Nivel]  
-**Fecha de resolución:** [YYYY-MM-DD]  
-**Tiempo empleado:** [HH:MM]  
+## 📓 Related Topics
+- [[topics/dynamic-programming/Dynamic-Programming|Dynamic-Programming]]
+- [[topics/search-and-sort/binary-search/Binary-Search|Binary-Search]]
+- [[topics/search-and-sort/two-pointers/Two-Pointers|Two-Pointers]]
+- [[topics/techniques/Greedy|Greedy]]
 
-## 🔗 Enlaces
-- **Problema:** [URL del problema]
-- **Submission:** [URL de tu submission si está disponible]
+## 📖 Description
+[Brief summary of the problem]
 
-## 📓Temas relacionados:
-[[Dynamic Programming]] [[Graph Theory]] [[Binary Search]]
+## 💡 Approach
+[Your approach and why it works]
 
-## 📖 Descripción
-[Breve resumen del problema en tus propias palabras - máximo 2-3 líneas]
+## ⚡ Complexity
+- **Time:** O(?)
+- **Space:** O(?)
 
-## 💡 Enfoque
-[Explicación de tu approach y por qué funciona]
+## 🔍 Key Points
+- [Important insight 1]
+- [Important insight 2]
 
-## ⚡ Complejidad
-- **Tiempo:** O(...)
-- **Espacio:** O(...)
+## 🔗 Related Problems
+- [Similar Problem 1]
+- [Similar Problem 2]
 
-## 🔍 Puntos Clave
-- [Insight importante 1]
-- [Insight importante 2]
-- [Casos edge importantes]
-
-## 📚 Conceptos Aprendidos
-[Qué aprendiste resolviendo este problema]
-
-## 🔗 Problemas Relacionados
-- [[Otro Problema Similar]]
-- [[Problema que usa misma técnica]]
-
-## 🔄 Versiones
-- `solution.cpp` - Solución principal
-- `solution_v2.py` - Versión alternativa (si existe)
-- `brute_force.cpp` - Solución por fuerza bruta (para comparar)
+## 🔄 Versions
+- `solution.cpp` - Main solution 
