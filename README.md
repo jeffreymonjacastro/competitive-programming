@@ -11,6 +11,6 @@ Competitive Programming codes &amp; learning
 Hello World
 
 ```dataview
-TABLE platform, contest, difficulty, date
+TABLE platform, contest, difficulty, date, tags
 FROM #greedy 
 ```
