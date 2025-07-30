@@ -1,27 +1,21 @@
 ---
 platform: Codeforces
-contest: 1020D3
-difficulty: 1500
+contest: 1028D2
+difficulty: 800
 date: 2025-07-30
 tags: 
   - codeforces
-  - 1500
-  - search-and-sort/binary-search
-  - binary-search
-  - dynamic-programming
-  - dp
+  - 800
+  - miscellaneous
+  - games
   - techniques
   - greedy
-  - search-and-sort/two-pointers
-  - two-pointers
 ---
-# [D. Flower Boy](link)
+# [A Gellyfish And Tricolor Pansy](link)
 
 ## 📓 Related Topics
-- [[topics/search-and-sort/binary-search/Binary-Search|Binary-Search]]
-- [[topics/dynamic-programming/Dynamic-Programming|Dynamic-Programming]]
+- [[topics/miscellaneous/Games|Games]]
 - [[topics/techniques/Greedy|Greedy]]
-- [[topics/search-and-sort/two-pointers/Two-Pointers|Two-Pointers]]
 
 ## 📖 Description
 [Brief summary of the problem]

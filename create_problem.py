@@ -145,8 +145,8 @@ tags:
 - [Important insight 2]
 
 ## 🔗 Related Problems
-- [[Similar Problem 1]]
-- [[Similar Problem 2]]
+- [Similar Problem 1]
+- [Similar Problem 2]
 
 ## 🔄 Versions
 - `solution.cpp` - Main solution 
