@@ -75,6 +75,6 @@ LIMIT 1
 - **Variation 1:** [Description]
 - **Variation 2:** [Description]
 
-## 📝 Notes
+## 📝 To-do
 - [ ] Problem 1
 - [ ] Problem 2
