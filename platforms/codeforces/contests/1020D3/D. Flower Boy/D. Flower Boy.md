@@ -23,12 +23,8 @@ tags:
 - [[topics/techniques/Greedy|Greedy]]
 - [[topics/search-and-sort/two-pointers/Two-Pointers|Two-Pointers]]
 
-## 📓 Temas relacionados
-[[topics/search-and-sort/binary-search/Binary-Search|Binary-Search]] [[topics/dynamic-programming/Dynamic-Programming|Dynamic-Programming]] [[topics/techniques/Greedy|Greedy]] [[topics/search-and-sort/two-pointers/Two-Pointers|Two-Pointers]]
-=======
 ## 📖 Description
 [Brief summary of the problem]
->>>>>>> origin/main
 
 ## 💡 Approach
 [Your approach and why it works]
