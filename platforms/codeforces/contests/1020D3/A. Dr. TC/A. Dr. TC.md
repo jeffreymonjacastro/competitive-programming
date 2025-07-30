@@ -2,6 +2,7 @@
 platform: Codeforces
 contest: 1020D3
 difficulty: 800
+status: 🟢Done
 date: 2025-07-30
 tags:
   - cp
