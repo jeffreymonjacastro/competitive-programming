@@ -1,107 +1,80 @@
-# BFS (Breadth-First Search)
+# Dynamic-Programming
 
-#graphs/search/bfs #algorithm #competitive-programming
+**Parent Topic:** [[topics/dynamic-programming/Dynamic Programming|Dynamic-Programming]]
 
-**Tema padre:** [[topics/graphs/Graph Theory|Graph Theory]] > [[topics/graphs/search/Search|Búsqueda en Grafos]]
+## 🎯 Definition
+[Algorithm/technique definition]
 
-## 🎯 Definición
-BFS es un algoritmo de búsqueda que explora todos los vértices a distancia k antes de explorar vértices a distancia k+1.
+## 🔑 Key Concepts
+- **Concept 1:** [Explanation]
+- **Concept 2:** [Explanation]
+- **Complexity:** O(?) time, O(?) space
 
-## 🔑 Conceptos Clave
-- **Cola (Queue):** Estructura FIFO para mantener el orden de exploración
-- **Visitados:** Array para evitar ciclos infinitos
-- **Niveles:** Distancia desde el nodo fuente
-- **Complejidad:** O(V + E) en tiempo, O(V) en espacio
-
-## 💻 Implementación Template
+## 💻 Implementation Template
 ```cpp
-vector<int> bfs(int start, vector<vector<int>>& adj) {
-    int n = adj.size();
-    vector<int> dist(n, -1);
-    queue<int> q;
-    
-    dist[start] = 0;
-    q.push(start);
-    
-    while (!q.empty()) {
-        int u = q.front();
-        q.pop();
-        
-        for (int v : adj[u]) {
-            if (dist[v] == -1) {
-                dist[v] = dist[u] + 1;
-                q.push(v);
-            }
-        }
-    }
-    
-    return dist;
-}
-\```
+// Basic template for Dynamic-Programming
+// Add implementation here
+```
 
-## 🎯 Casos de Uso
-- Camino más corto en grafos no ponderados
-- Componentes conexas
-- Detección de ciclos
-- Coloreo de grafos bipartitos
-- Laberinto con obstáculos
+## 🎯 Use Cases
+- [Use case 1]
+- [Use case 2]
 
-## 🔗 Conceptos Relacionados
-- [[topics/graphs/search/DFS|DFS]] - Alternativa de búsqueda en profundidad
-- [[topics/graphs/shortest-path/Dijkstra|Dijkstra]] - Extensión para grafos ponderados
-- [[topics/data-structures/trees/Queue|Queue]] - Estructura de datos utilizada
+## 🔗 Related Concepts
+- [Related Concept 1]
+- [Related Concept 2]
 
-## 🧠 Problemas Resueltos
-
-### Fácil (800-1200)
+## 🧠 Solved Problems
+### Easy (800 - 1200)
 ```dataview
-LIST file.name
-FROM #graphs/search/bfs AND #competitive-programming 
-WHERE contains(file.path, "platforms/") AND (contains(tags, "#easy") OR contains(tags, "#800") OR contains(tags, "#1000") OR contains(tags, "#1200"))
-SORT fecha DESC
-\```
+TABLE platform, difficulty, date
+FROM #Dynamic-Programming
+WHERE contains(file.path, "platforms/") AND difficulty >= 800 AND difficulty <= 1200
+SORT date DESC
+```
 
-### Medio (1200-1600)
+### Medium (1200-1600)
 ```dataview
-LIST file.name
-FROM #graphs/search/bfs AND #competitive-programming 
-WHERE contains(file.path, "platforms/") AND (contains(tags, "#medium") OR contains(tags, "#1400") OR contains(tags, "#1600"))
-SORT fecha DESC
-\```
+TABLE platform, difficulty, date
+FROM #Dynamic-Programming
+WHERE contains(file.path, "platforms/") AND difficulty > 1200 AND difficulty <= 1600
+SORT date DESC
+```
 
-### Difícil (1600+)
+### Hard (1600+)
 ```dataview
-LIST file.name
-FROM #graphs/search/bfs AND #competitive-programming 
-WHERE contains(file.path, "platforms/") AND (contains(tags, "#hard") OR contains(tags, "#1800") OR contains(tags, "#2000"))
-SORT fecha DESC
-\```
+TABLE platform, difficulty, date
+FROM #Dynamic-Programming
+WHERE contains(file.path, "platforms/") AND difficulty > 1600
+SORT date DESC
+```
 
-## 🎯 Estado Personal
-- **Nivel de dominio:** 8/10
-- **Problemas resueltos:** 
+## 🎯 Personal Status
+- **Mastery Level:** ?/10
+- **Problems Solved:** 
 ```dataview
 TABLE rows.length as "Total"
-FROM #graphs/search/bfs AND #competitive-programming 
+FROM #Dynamic-Programming
 WHERE contains(file.path, "platforms/")
-\```
-- **Última práctica:** 
+```
+
+- **Last Practice:** 
 ```dataview
-LIST file.name
-FROM #graphs/search/bfs AND #competitive-programming 
+TABLE platform, date
+FROM #Dynamic-Programming
 WHERE contains(file.path, "platforms/")
-SORT fecha DESC
+SORT date DESC
 LIMIT 1
-\```
-- **Necesita repaso:** #needs-review
+```
 
-## 📚 Problemas Para Practicar
-- [ ] Codeforces - Maze (encontrar camino más corto)
-- [ ] LeetCode - Word Ladder
-- [ ] AtCoder - Grid Path Finding
+## 📚 Study Resources
+- [Resource 1](URL)
+- [Resource 2](URL)
 
-## 🏆 Variaciones Importantes
-- **Multi-source BFS:** Múltiples puntos de inicio
-- **0-1 BFS:** Para grafos con pesos 0 y 1
-- **BFS en matriz:** Navegación en grillas 2D
-- **BFS con estados:** Cuando cada nodo tiene múltiples estados
+## 🏆 Important Variations
+- **Variation 1:** [Description]
+- **Variation 2:** [Description]
+
+## 📝 To-do
+- [ ] Problem 1
+- [ ] Problem 2
