@@ -1,5 +1,8 @@
 ---
 state: full
+tags:
+  - greedy
+  - algorithm
 ---
 
 # competitive-programming
@@ -8,6 +11,6 @@ Competitive Programming codes &amp; learning
 Hello World
 
 ```dataview
-LIST replace(file.path)
+TABLE state, tags
 FROM #greedy 
 ```
