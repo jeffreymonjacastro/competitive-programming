@@ -2,7 +2,7 @@
 platform: Cses
 contest: Dynamic Programming
 difficulty: 800
-status: 🔴Unresolved
+status: 🟢Solved
 date: 2025-07-30
 tags:
   - cp
