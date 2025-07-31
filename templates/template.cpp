@@ -6,6 +6,13 @@ using namespace std;
   cin.tie(nullptr);
 #define ll long long
 #define lld long double
+#define pii pair<int, int>
+#define pdd pair<double, double>
+#define f first
+#define s second
+#define println(x) cout << x << "\n"
+#define print(x) cout << x
+
 const int mod = 1e9 + 7;
 
 ll binPow(ll a, ll b) {
@@ -22,7 +29,7 @@ ll binPow(ll a, ll b) {
 
 void solve() {}
 
-int main() {
+signed main() {
   cpu();
   int t;
   t = 1;
