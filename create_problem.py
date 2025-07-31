@@ -27,8 +27,12 @@ TAG_TO_PATH = {
     'fenwick-tree': 'topics/data-structures/trees/Fenwick-Tree.md',
     'dsu': 'topics/data-structures/disjoint-set/DSU.md',
     'trie': 'topics/data-structures/strings/Trie.md',
+    'linked-list': 'topics/data-structures/linked-list/Linked-List.md',
+    'array': 'topics/data-structures/arrays/Array.md',
+    'hash-table': 'topics/data-structures/hash-table/Hash-Table.md',
     
     # math
+    'math': 'topics/mathematics/Math.md',
     'number-theory': 'topics/mathematics/number-theory/Number-Theory.md',
     'gcd': 'topics/mathematics/number-theory/GCD-LCM.md',
     'primes': 'topics/mathematics/number-theory/Prime-Numbers.md',
@@ -36,11 +40,13 @@ TAG_TO_PATH = {
     'modular-arithmetic': 'topics/mathematics/number-theory/Modular-Arithmetic.md',
 
     # Strings
+    'strings': 'topics/strings/Strings.md',
     'kmp': 'topics/strings/pattern-matching/KMP.md',
     'z-algorithm': 'topics/strings/pattern-matching/Z-Algorithm.md',
     'string-hashing': 'topics/strings/string-processing/String-Hashing.md',
 
     # Sorting and Searching
+    'sorting': 'topics/search-and-sort/Sorting.md',
     'binary-search': 'topics/search-and-sort/binary-search/Binary-Search.md',
     'linear-search': 'topics/search-and-sort/linear-search/Linear-Search.md',
     'two-pointers': 'topics/search-and-sort/two-pointers/Two-Pointers.md',
@@ -96,7 +102,7 @@ def create_problem_structure(platform, contest, problem_name, difficulty, tags):
     base_path = f"platforms/{platform}"
     if platform == "CSES":
         problem_path = f"{base_path}/{contest}/{problem_name}"
-    elif contest == "practice":
+    elif contest.lower() == "practice":
         problem_path = f"{base_path}/practice/{problem_name}"
     else:
         problem_path = f"{base_path}/contests/{contest}/{problem_name}"
