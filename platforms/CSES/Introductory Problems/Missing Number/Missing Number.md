@@ -2,14 +2,14 @@
 platform: Cses
 contest: Introductory Problems
 difficulty: 800
-status: 🔴Unresolved
+status: 🟢Solved
 date: 2025-07-30
 tags:
   - cp
   - implementation
   - techniques
 ---
-# [Missing Number](link)
+# [Missing Number](https://cses.fi/problemset/task/1083)
 
 ## 📓 Related Topics
 - [[topics/techniques/Implementation|Implementation]]
