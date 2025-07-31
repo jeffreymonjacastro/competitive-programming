@@ -9,7 +9,7 @@ tags:
   - linear-search
   - search-and-sort
 ---
-# [Distinct Numbers](link)
+# [Distinct Numbers](https://cses.fi/problemset/task/1621)
 
 ## 📓 Related Topics
 - [[topics/search-and-sort/linear-search/Linear-Search|Linear-Search]]

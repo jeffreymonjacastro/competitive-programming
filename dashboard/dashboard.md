@@ -32,6 +32,7 @@ LIMIT 5
 ```dataview
 TABLE length(rows) as Problems
 FROM #cp 
+WHERE status = "🟢Solved"
 GROUP BY difficulty 
 SORT difficulty ASC
 ```
