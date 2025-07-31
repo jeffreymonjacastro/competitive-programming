@@ -56,6 +56,7 @@ TAG_TO_PATH = {
     'greedy': 'topics/techniques/Greedy.md',
     'divide-conquer': 'topics/techniques/Divide-and-Conquer.md',
     'backtracking': 'topics/techniques/Backtracking.md',
+    'implementation': 'topics/techniques/Implementation.md',
 
     # Geometry
     'line-geometry': 'topics/geometry/Line-Geometry.md',
