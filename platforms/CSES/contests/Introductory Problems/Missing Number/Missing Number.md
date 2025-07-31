@@ -2,7 +2,7 @@
 platform: Cses
 contest: Introductory Problems
 difficulty: 800
-status: 🔴Unresolved
+status: 🟢Solved
 date: 2025-07-30
 tags:
   - cp
@@ -15,7 +15,7 @@ tags:
 - [[topics/techniques/Implementation|Implementation]]
 
 ## 📖 Description
-[Brief summary of the problem]
+Given an integer n, 
 
 ## 💡 Approach
 [Your approach and why it works]
