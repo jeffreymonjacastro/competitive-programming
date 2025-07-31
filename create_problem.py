@@ -42,6 +42,7 @@ TAG_TO_PATH = {
 
     # Sorting and Searching
     'binary-search': 'topics/search-and-sort/binary-search/Binary-Search.md',
+    'linear-search': 'topics/search-and-sort/linear-search/Linear-Search.md',
     'two-pointers': 'topics/search-and-sort/two-pointers/Two-Pointers.md',
     'sliding-window': 'topics/search-and-sort/two-pointers/Sliding-Window.md',
     'complete-search': 'topics/search-and-sort/complete-search/Complete-Search.md',
@@ -86,7 +87,6 @@ def get_hierarchical_tags(tags):
             if parts[0] not in hierarchical_tags:
                 hierarchical_tags.append(parts[0])
 
-            # Agregar tag específico
             specific_tag = tag.replace('-', '-')
             hierarchical_tags.append(specific_tag)
 
@@ -94,10 +94,12 @@ def get_hierarchical_tags(tags):
 
 def create_problem_structure(platform, contest, problem_name, difficulty, tags):
     base_path = f"platforms/{platform}"
-    if contest and contest != "practice":
-        problem_path = f"{base_path}/contests/{contest}/{problem_name}"
-    else:
+    if platform == "CSES":
+        problem_path = f"{base_path}/{contest}/{problem_name}"
+    elif contest == "practice":
         problem_path = f"{base_path}/practice/{problem_name}"
+    else:
+        problem_path = f"{base_path}/contests/{contest}/{problem_name}"
     
     os.makedirs(problem_path, exist_ok=True)
 
