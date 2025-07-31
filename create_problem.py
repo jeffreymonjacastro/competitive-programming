@@ -127,7 +127,7 @@ tags:
   - cp
 {('\n').join(f'  - {tag}' for tag in hierarchical_tags)}
 ---
-# [{problem_name.replace('-', ' ').title()}](link)
+# [{problem_name.title()}](link)
 
 ## 📓 Related Topics
 {('\n').join(f'- {link}' for link in topic_links) if topic_links else '[Topic 1] [Topic 2]'}
