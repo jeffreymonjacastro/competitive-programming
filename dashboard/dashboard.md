@@ -25,7 +25,7 @@ FLATTEN filter(
 ) as tags
 GROUP BY tags
 SORT length(rows) DESC
-LIMIT 5
+LIMIT 10
 ```
 
 ## 📈 Difficulty Progress
@@ -43,5 +43,5 @@ TABLE length(rows) as Problems
 FROM #cp 
 WHERE status = "🟢Solved"
 GROUP BY platform
-SORT Problems DESC
+SORT length(rows) DESC
 ```
