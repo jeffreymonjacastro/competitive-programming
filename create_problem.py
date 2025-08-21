@@ -30,6 +30,7 @@ TAG_TO_PATH = {
     'linked-list': 'topics/data-structures/linked-list/Linked-List.md',
     'array': 'topics/data-structures/arrays/Array.md',
     'hash-table': 'topics/data-structures/hash-table/Hash-Table.md',
+    'binary-tree': 'topics/data-structures/trees/Binary-Tree.md',
     
     # math
     'math': 'topics/mathematics/Math.md',
